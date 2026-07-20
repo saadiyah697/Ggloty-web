@@ -1181,6 +1181,8 @@ main>section {
     .eyebrow {
         order: 1;
         margin-bottom: 0.5rem;
+        font-size: 1rem;
+        text-align: center;
     }
 
     .hero-title {
@@ -1211,8 +1213,8 @@ main>section {
     }
 
     .photo-card {
-        width: 170px;
-        height: 230px;
+        width: 195px;
+        height: 260px;
     }
 
     .photo-card.pos-left {
