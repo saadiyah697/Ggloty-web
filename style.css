@@ -1196,7 +1196,7 @@ main>section {
     .hero-visual {
         order: 3;
         height: 310px;
-        margin-top: 0.2rem;
+        margin-top: -0.5rem;
         margin-bottom: -0.3rem;
     }
 
