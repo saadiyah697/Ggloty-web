@@ -776,7 +776,7 @@ main > section { padding-left: var(--edge); padding-right: var(--edge); position
     .logo-img { height: 32px; }
 
     .hero { padding-top: 2.6rem; padding-bottom: 2.6rem; min-height: auto; }
-    .hero-visual { height: 320px; order: -1; margin-bottom: 1rem; }
+    .hero-visual { height: 320px; order: 3; margin-bottom: 1rem; }
     .photo-card { width: 170px; height: 230px; }
     .photo-card.pos-left { transform: translate(-50%,-50%) translate(-58px, 12px) rotate(-9deg) scale(0.86); }
     .photo-card.pos-right { transform: translate(-50%,-50%) translate(58px, 14px) rotate(8deg) scale(0.84); }
