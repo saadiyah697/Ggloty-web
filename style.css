@@ -398,7 +398,7 @@ main>section {
     padding: 0.95rem 2.3rem;
     border-radius: 999px;
     font-weight: 700;
-    font-size: 1.02rem;
+    font-size: 1.3rem;
     letter-spacing: 0.3px;
     box-shadow: 0 16px 40px var(--amethyst-30);
     transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
@@ -414,7 +414,7 @@ main>section {
     align-items: center;
     gap: 8px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: var(--light-amethyst);
     opacity: 0.85;
     transition: opacity 0.3s ease;
@@ -571,7 +571,7 @@ main>section {
 
 .perk-tag {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--deep-brand-purple);
     margin-bottom: 0.9rem;
@@ -1235,6 +1235,11 @@ main>section {
     .btn-glow {
         width: 100%;
         justify-content: center;
+    }
+    .link-arrow {
+        justify-content: center;
+        margin-top: 0.9rem;
+
     }
 
     .quote-mark {
