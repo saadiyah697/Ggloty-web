@@ -130,3 +130,82 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => navObserver.observe(section));
     }
 });
+
+/* ------------------------------------------------------------
+      5. FAQ PAGE
+       ------------------------------------------------------------ */
+
+// Accordion Toggle Handler
+document.addEventListener('DOMContentLoaded', () => {
+    const accordionHeaders = document.querySelectorAll('.faq-accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const currentItem = header.parentElement;
+            const isOpen = currentItem.classList.contains('active');
+
+            // Close all other accordion items
+            document.querySelectorAll('.faq-accordion-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-accordion-header').setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle current item
+            if (!isOpen) {
+                currentItem.classList.add('active');
+                header.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+});
+
+/* ------------------------------------------------------------
+      6. CONTACT FORM SUBMISSION
+       ------------------------------------------------------------ */
+
+
+// Web3Forms AJAX Submission Handler
+const form = document.getElementById('gglotyContactForm');
+const result = document.getElementById('formResult');
+
+if (form) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.style.display = "block";
+        result.style.color = "var(--deep-brand-purple)";
+        result.innerHTML = "Sending your message...";
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.style.color = "#10B981"; // Success Green
+                result.innerHTML = "✨ Message sent successfully! We'll get back to you shortly.";
+            } else {
+                result.style.color = "#EF4444"; // Error Red
+                result.innerHTML = json.message || "Something went wrong!";
+            }
+        })
+        .catch(error => {
+            result.style.color = "#EF4444";
+            result.innerHTML = "Something went wrong! Please try again later.";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 5000);
+        });
+    });
+}
