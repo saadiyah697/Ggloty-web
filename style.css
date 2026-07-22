@@ -115,7 +115,7 @@ main>section {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(253, 252, 255, 0.86);
+    background: #F4ECFF;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--plum-10);
@@ -360,6 +360,20 @@ main>section {
     letter-spacing: -1.8px;
     color: var(--luxury-white);
     margin-bottom: 1.4rem;
+}
+p.hero-text {
+    font-size: 1.12rem;
+    line-height: 1.75;
+    color: #c8bfe1;
+    max-width: 540px;
+    margin-bottom: 1.2rem;
+}
+
+.brand-highlight {
+    font-weight: 700;                     
+    font-size: 1.6rem;                    
+    color:  #f0e0ff; 
+    letter-spacing: -0.1px;
 }
 
 .accent-ital {
@@ -922,11 +936,16 @@ main>section {
    ========================================================================== */
 
 
-.contact-section-wrapper {
-    background: var(--soft-cream-bg);
-    padding: 5rem 0 5rem;
+.contact-page-wrapper {
+    padding-top: 80px;
+    min-height: 85vh;
 }
 
+.contact-section-wrapper {
+    background: var(--soft-cream-bg, #FAF8FF);
+    padding: 3.5rem 0 5rem;
+    width: 100%;
+}
 
 .contact-purple-card {
     background: #311c4f;
@@ -1019,11 +1038,12 @@ main>section {
 }
 
 .form-header h2 {
-    font-size: 2.3rem;
+    font-size: 2.8rem;
     letter-spacing: -1px;
     color: var(--luxury-black);
     margin-top: 0.4rem;
     margin-bottom: 1.8rem;
+    
 }
 
 .contact-form-body {
@@ -1068,15 +1088,19 @@ textarea.luxury-input {
 /* ==========================================================================
    FAQ PAGE / SECTION 
    ========================================================================== */
-#faq,
-.faq-section-wrapper {
+
+
+.faq-section-wrapper,
+.faq-container {
     background: var(--soft-cream-bg);
-    padding: 3.5rem 0 5rem;
+    padding: 9rem 0 5rem; 
     width: 100%;
+    min-height: 80vh;
+    box-sizing: border-box;
 }
 
 .light-purple-card {
-    background: #F4ECFF;
+    background: #d9c0fa;
     border-radius: 46px;
     padding: 4.5rem 4rem;
     max-width: 1280px;
@@ -1088,15 +1112,18 @@ textarea.luxury-input {
 
 .card-head {
     max-width: 750px;
-    margin-bottom: 3.2rem;
+    margin: 0 auto 3.2rem auto; /* Centers the head container horizontally */
+    text-align: center;         /* Centers all text inside it */
 }
 
 .card-head h2 {
-    font-size: clamp(2.2rem, 3.2vw, 3rem);
+    font-size: clamp(2.4rem, 3.2vw, 3rem);
     letter-spacing: -1.2px;
     margin-top: 0.6rem;
-    color: var(--luxury-black);
+    color: var(--luxury-black, #1a0b2e);
     line-height: 1.15;
+    text-align: center;
+    font-weight: 700;
 }
 
 .card-sub {
@@ -1119,7 +1146,7 @@ textarea.luxury-input {
     border: 1px solid rgba(74, 46, 128, 0.12);
     border-radius: 20px;
     padding: 1.4rem 2rem;
-    transition: all 0.35s var(--ease);
+    transition: all 0.35s var(--ease, ease);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     overflow: hidden;
 }
@@ -1144,10 +1171,10 @@ textarea.luxury-input {
 }
 
 .faq-accordion-header h3 {
-    font-family: var(--font-body);
+    font-family: var(--font-body, inherit);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--luxury-black);
+    color: var(--luxury-black, #1a0b2e);
     margin: 0;
     transition: color 0.3s ease;
 }
@@ -1162,29 +1189,29 @@ textarea.luxury-input {
     justify-content: center;
     flex-shrink: 0;
     background: #ffffff;
-    transition: all 0.35s var(--ease);
+    transition: all 0.35s var(--ease, ease);
 }
 
 .arrow-icon {
     width: 18px;
     height: 18px;
-    stroke: var(--deep-brand-purple);
-    transition: transform 0.4s var(--ease);
+    stroke: var(--deep-brand-purple, #6e44ff);
+    transition: transform 0.4s var(--ease, ease);
 }
 
 .faq-accordion-item.active {
     background: #ffffff;
-    border-color: var(--amethyst-glow);
+    border-color: var(--amethyst-glow, #8b5cf6);
     box-shadow: 0 14px 30px rgba(139, 92, 246, 0.12);
 }
 
 .faq-accordion-item.active .faq-accordion-header h3 {
-    color: var(--deep-brand-purple);
+    color: var(--deep-brand-purple, #6e44ff);
 }
 
 .faq-accordion-item.active .faq-arrow-btn {
-    background: var(--deep-brand-purple);
-    border-color: var(--deep-brand-purple);
+    background: var(--deep-brand-purple, #6e44ff);
+    border-color: var(--deep-brand-purple, #6e44ff);
 }
 
 .faq-accordion-item.active .arrow-icon {
@@ -1196,7 +1223,7 @@ textarea.luxury-input {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.4s var(--ease), opacity 0.3s ease, margin-top 0.3s ease;
+    transition: max-height 0.4s var(--ease, ease), opacity 0.3s ease, margin-top 0.3s ease;
 }
 
 .faq-accordion-item.active .faq-accordion-content {
@@ -1214,33 +1241,25 @@ textarea.luxury-input {
     margin: 0;
 }
 
-
-
-/* --------------------------------------------------------------------------
-   Terms & Conditions Formatting
-   -------------------------------------------------------------------------- */
-.terms-body h2 {
-    font-size: 1.4rem;
-    color: var(--light-amethyst);
-    margin: 2rem 0 0.8rem;
-}
-
-.terms-body p {
-    color: var(--lilac-dim);
-    line-height: 1.75;
-    margin-bottom: 1.2rem;
-}
-
-/* Responsive Overrides */
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
+/* Responsive Overrides for Mobile / Tablet */
+@media (max-width: 640px) {
+    #faq,
+    .faq-section-wrapper,
+    .faq-container {
+        padding: 5.5rem 0 3rem;
     }
 
-    .subpage-card {
-        padding: 1.6rem;
+    .light-purple-card {
+        padding: 2rem 1.2rem;
+        border-radius: 24px;
+        width: 92vw;
+    }
+
+    .faq-accordion-item {
+        padding: 1.2rem 1.2rem;
     }
 }
+
 
 /* ==========================================================================
    FOOTER — premium three-column masthead + divider + statement strip
@@ -1897,10 +1916,9 @@ textarea.luxury-input {
 
 
 /* ==========================================================================
-   TERMS & CONDITIONS PAGE STYLES
+   TERMS & CONDITIONS MASTER PAGE STYLES
    ========================================================================== */
 
-/* Outer Layout & Page Spacing */
 .legal-page-container {
     width: 100%;
     min-height: 100vh;
@@ -1911,19 +1929,17 @@ textarea.luxury-input {
     box-sizing: border-box;
 }
 
-/* Central Card Box */
 .legal-card {
     width: 100%;
-    max-width: 900px;
+    max-width: 960px;
     background: #ffffff;
     border-radius: 28px;
-    padding: 3.5rem 3rem;
-    box-shadow: 0 15px 35px rgba(74, 46, 128, 0.07);
-    border: 1px solid rgba(74, 46, 128, 0.08);
+    padding: 4rem 3.5rem;
+    box-shadow: 0 15px 40px rgba(74, 46, 128, 0.08);
+    border: 1px solid rgba(74, 46, 128, 0.1);
     box-sizing: border-box;
 }
 
-/* Header Area */
 .legal-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -1943,65 +1959,84 @@ textarea.luxury-input {
 }
 
 .legal-title {
-    font-family: inherit;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     color: #1a0b2e;
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
 .legal-subtitle {
-    font-size: 0.92rem;
+    font-size: 1rem;
     color: #6c757d;
 }
 
 .legal-divider {
     border: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(110, 68, 255, 0.2), transparent);
-    margin: 2.5rem 0;
+    background: linear-gradient(90deg, transparent, rgba(110, 68, 255, 0.25), transparent);
+    margin: 3rem 0;
 }
 
-/* Content Body Typography */
+/* Document Block Headers */
+.doc-main-title {
+    font-size: 1.6rem;
+    color: #2b114d;
+    background: #f7f4ff;
+    padding: 1rem 1.5rem;
+    border-left: 5px solid #6e44ff;
+    border-radius: 6px 12px 12px 6px;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.doc-intro {
+    font-size: 1.02rem;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+}
+
+/* Legal Sections & Lists */
 .legal-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-.legal-section h2 {
-    font-size: 1.25rem;
-    color: #2b114d;
-    margin-bottom: 0.8rem;
+.legal-section h3 {
+    font-size: 1.2rem;
+    color: #1a0b2e;
+    margin-bottom: 0.6rem;
+    margin-top: 1.2rem;
     font-weight: 600;
 }
 
 .legal-section p {
-    font-size: 1rem;
+    font-size: 0.98rem;
     color: #4a4a4a;
-    line-height: 1.7;
-    margin-bottom: 0.8rem;
+    line-height: 1.75;
+    margin-bottom: 0.6rem;
 }
 
 .legal-section ul {
-    margin: 0.8rem 0 0.8rem 1.5rem;
+    margin: 0.6rem 0 0.8rem 1.5rem;
     padding: 0;
 }
 
 .legal-section li {
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     color: #4a4a4a;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
+    line-height: 1.65;
+    margin-bottom: 0.4rem;
 }
 
-/* Contact Details Box */
 .legal-contact-box {
     background: #f9f7ff;
-    border-left: 4px solid #6e44ff;
+    border: 1px solid rgba(110, 68, 255, 0.2);
     padding: 1.2rem 1.5rem;
-    border-radius: 8px 12px 12px 8px;
-    margin-top: 1rem;
+    border-radius: 12px;
+    margin-top: 0.8rem;
 }
 
 .legal-contact-box p {
@@ -2012,7 +2047,7 @@ textarea.luxury-input {
 .legal-contact-box a {
     color: #6e44ff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .legal-contact-box a:hover {
@@ -2020,23 +2055,28 @@ textarea.luxury-input {
 }
 
 /* ==========================================================================
-   RESPONSIVE OVERRIDES
+   RESPONSIVE STYLES
    ========================================================================== */
 
 @media (max-width: 960px) {
     .legal-card {
-        padding: 2.5rem 2rem;
+        padding: 3rem 2rem;
         border-radius: 22px;
     }
 
     .legal-title {
-        font-size: 2rem;
+        font-size: 2.1rem;
+    }
+
+    .doc-main-title {
+        font-size: 1.35rem;
+        padding: 0.8rem 1.2rem;
     }
 }
 
 @media (max-width: 640px) {
     .legal-page-container {
-        padding: 2rem 1rem;
+        padding: 2rem 0.8rem;
     }
 
     .legal-card {
@@ -2048,12 +2088,16 @@ textarea.luxury-input {
         font-size: 1.6rem;
     }
 
-    .legal-section h2 {
-        font-size: 1.1rem;
+    .doc-main-title {
+        font-size: 1.15rem;
+    }
+
+    .legal-section h3 {
+        font-size: 1.05rem;
     }
 
     .legal-section p, 
     .legal-section li {
-        font-size: 0.92rem;
+        font-size: 0.9rem;
     }
 }
