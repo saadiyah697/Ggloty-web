@@ -1555,8 +1555,8 @@ textarea.luxury-input {
     }
 
     .hero {
-        padding-top: 2.6rem;
-        padding-bottom: 2.6rem;
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
         min-height: auto;
     }
 
@@ -1580,7 +1580,7 @@ textarea.luxury-input {
 
     .hero-title {
         order: 2;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem
         font-size: 2.8rem;
         text-align: center;
     }
@@ -1596,7 +1596,10 @@ textarea.luxury-input {
 
     .hero-text {
         order: 4;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
+        margin-top: -0.4rem;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .hero-actions {
@@ -1610,6 +1613,13 @@ textarea.luxury-input {
         width: 195px;
         height: 260px;
     }
+    .photo-stack {
+       margin-top: -4.5rem !important;  /* Pulls photo stack up toward title */
+        margin-bottom: -1rem !important;/* PULLS THE PARAGRAPH UPWARD */
+        position: relative;
+        top: 0;
+    }
+
 
     .photo-card.pos-left {
         transform: translate(-50%, -50%) translate(-58px, 12px) rotate(-9deg) scale(0.86);
