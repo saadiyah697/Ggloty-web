@@ -225,7 +225,7 @@ main>section {
     display: flex;
     align-items: center;
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
 }
 
 .hero-glow {
@@ -314,7 +314,7 @@ main>section {
     letter-spacing: -1.8px;
     color: var(--luxury-white);
     margin-bottom: 1.4rem;
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 p.hero-text {
@@ -424,7 +424,7 @@ p.hero-text {
     position: relative;
     width: 100%;
     height: 100%;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .photo-card {
