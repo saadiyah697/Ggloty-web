@@ -1,4 +1,4 @@
-# 💄 Ggloty — Doorstep Beauty Curation Platform
+# 💄 Ggloty — Beauty Curation Platform
 
 A modern, responsive web application for **Ggloty**, a luxury beauty infrastructure platform connecting clients with document-verified stylists and salon professionals for doorstep services.
 
