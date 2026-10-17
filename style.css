@@ -1911,7 +1911,7 @@ textarea.luxury-input {
 .terms-badge {
   display: inline-block;
   padding: 6px 14px;
-  margin-bottom: 8px; /* FIXED */
+  margin-bottom: 10px; /* FIXED */
   background-color: var(--white-08);
   color: var(--deep-brand-purple);
   border: 1px solid var(--amethyst-30);
@@ -1927,8 +1927,9 @@ textarea.luxury-input {
   font-family: var(--font-display);
   font-size: 2.6rem;
   color:#503492;
-  margin-bottom: 10px; /* FIXED */
+  margin-bottom: 12px; /* FIXED */
   line-height: 1.1; /* FIXED */
+  white-space: nowrap; /* TITLE ALWAYS IN ONE LINE */
 }
 
 /* FIXED: removed negative margin */
@@ -1936,7 +1937,7 @@ textarea.luxury-input {
   font-size: 1rem;
   color: var(--slate-muted);
   line-height: 1.3;
-  margin-bottom: 12px; /* FIXED */
+  margin-bottom: 14px; /* FIXED */
   text-align: center;
 }
 
@@ -1945,7 +1946,7 @@ textarea.luxury-input {
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .terms-link {
@@ -2141,7 +2142,8 @@ textarea.luxury-input {
   }
 
   .terms-subtitle {
-    font-size: 0.95rem;
+    font-size: 2.2rem;
+    white-space: normal;
   }
 
   .terms-meta {
