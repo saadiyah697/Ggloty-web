@@ -1941,17 +1941,18 @@ textarea.luxury-input {
 
 .terms-title {
   font-family: var(--font-display);
-  font-size: 3rem;
+  font-size: 2.6rem;
   color:#503492;
   margin-bottom: -0.2px;
-  line-height: 1;
+  line-height: -1;
 }
 
 .terms-subtitle {
   font-size: 1rem;
   color: var(--slate-muted);
-  line-height: 1;
+  line-height: 2;
   margin-bottom: -5px;
+  text-align: center;
 }
 
 .terms-meta span {
