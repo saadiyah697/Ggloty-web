@@ -2013,16 +2013,19 @@ textarea.luxury-input {
 /* =========================================================
    PRIVACY PAGE — TOP TOC LAYOUT
 ========================================================= */
+
+/* MAIN WHITE BOX FOR PRIVACY */
 .privacy-box {
   background-color: var(--luxury-white);
   border: 1px solid var(--plum-16);
   border-radius: 18px;
-  padding: 30px;
-  margin: 0 auto 20px;
+  padding: 44px;
+  margin: 0 auto 36px;
   max-width: 1200px;
   box-shadow: 0 10px 30px rgba(74, 46, 128, 0.04);
 }
 
+/* OPTIONAL: If you use privacy-content wrapper */
 .privacy-content {
   max-width: 820px;
   margin: 0 auto;
@@ -2099,6 +2102,36 @@ textarea.luxury-input {
   color: var(--slate-muted);
   line-height: 1.7;
   margin-bottom: 8px;
+}
+
+/* =========================================================
+   ⭐ NEW — PRIVACY PAGE TABLE STYLING
+========================================================= */
+
+.privacy-page .tablewrap {
+  overflow-x: auto;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.privacy-page table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 650px;
+  font-size: 0.95rem;
+}
+
+.privacy-page th,
+.privacy-page td {
+  border: 1px solid #e5e5e5;
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.privacy-page th {
+  background-color: #faf7f0;
+  font-weight: 700;
 }
 
 /* =========================================================
