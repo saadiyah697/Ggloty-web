@@ -2017,7 +2017,7 @@ textarea.luxury-input {
   background-color: var(--luxury-white);
   border: 1px solid var(--plum-16);
   border-radius: 18px;
-  padding: 44px;
+  padding: 30px;
   margin: 0 auto 36px;
   max-width: 1200px;
   box-shadow: 0 10px 30px rgba(74, 46, 128, 0.04);
